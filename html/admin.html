@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página del Administrador</title>
+    <link rel="stylesheet" href="../CSS/styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, Administrador</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="usuarios.html">Gestión de Usuarios</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Gestión de Usuarios</h2>
+            <p>Aquí puedes gestionar los usuarios de la plataforma. Usa las opciones del menú para navegar.</p>
+            <button onclick="window.location.href='agregar_usuario.html'">Agregar Usuario</button>
+            <div id="user-list">
+                <!-- Aquí puedes cargar la lista de usuarios -->
+                <ul>
+                    <li>Usuario 1 - Rol: Médico</li>
+                    <li>Usuario 2 - Rol: Paciente</li>
+                    <li>Usuario 3 - Rol: Administrador</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Reportes</h2>
+            <p>Visualiza y genera reportes sobre el uso de la plataforma.</p>
+            <button onclick="window.location.href='generar_reporte.html'">Generar Reporte</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Aplicación de Salud. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

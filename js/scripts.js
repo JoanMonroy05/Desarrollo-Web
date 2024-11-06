@@ -5,8 +5,8 @@ const users = [
         email: "doctor1@example.com", 
         password: "contraseña123",
         roles: [
-            { name: "Médico", description: "Gestiona citas y pacientes.", icon: "👨‍⚕️", redirectUrl: "medico.html" },
-            { name: "Administrador", description: "Administra la plataforma.", icon: "🛠️", redirectUrl: "admin.html" }
+            { name: "Médico", description: "Gestiona citas y pacientes.", icon: "👨‍⚕️"},
+            { name: "Administrador", description: "Administra la plataforma.", icon: "🛠️" }
         ]
     },
     {
@@ -14,7 +14,7 @@ const users = [
         email: "patient1@example.com",
         password: "contraseña123",
         roles: [
-            { name: "Paciente", description: "Solicita citas y ve su historial médico.", icon: "👤", redirectUrl: "paciente.html" }
+            { name: "Paciente", description: "Solicita citas y ve su historial médico.", icon: "👤"}
         ] 
     }
 ];
@@ -47,7 +47,8 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
             // Añadir evento de clic para redirigir
             roleCard.addEventListener("click", function() {
-                window.location.href = role.redirectUrl; // Redirigir a la URL del rol
+                setUserRoleInStorage(role.name);
+                window.location.href = "../html/roll.html";
             });
 
             rolesContainer.appendChild(roleCard);
@@ -56,3 +57,8 @@ document.getElementById("login-form").addEventListener("submit", function(event)
         alert("Correo o contraseña incorrectos.");
     }
 });
+
+
+function setUserRoleInStorage(roleName) {
+    localStorage.setItem('userRole', roleName);
+}

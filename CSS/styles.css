@@ -1,41 +1,47 @@
 /* styles.css */
 
+/* Configuración general del cuerpo */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #F0F2F2; /* Color de fondo claro */
+    background-color: #F0F2F2; /* Fondo claro */
 }
 
+/* Encabezado principal */
 header {
     text-align: center;
-    background-color: #193140; /* Color principal */
-    color: #AAB7BF; /* Color del texto del encabezado */
+    background-color: #193140; /* Color de fondo del encabezado */
+    color: #AAB7BF; /* Color del texto */
     padding: 15px;
 }
 
+/* Estilo del logo */
 .logo {
-    max-width: 150px; /* Ajustar tamaño del logo */
+    max-width: 150px; /* Tamaño máximo del logo */
     display: block;
     margin: 0 auto 20px;
-    border-radius: 50%;
+    border-radius: 50%; /* Borde redondeado del logo */
 }
 
+/* Formulario de inicio de sesión */
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
+/* Estilos de etiquetas */
 label {
     display: block;
     margin-bottom: 5px;
-    color: #0F1D26; /* Color del texto de etiquetas */
+    color: #0F1D26; /* Color de las etiquetas */
 }
 
+/* Campos de entrada */
 input {
     width: 100%;
     padding: 10px;
@@ -45,21 +51,24 @@ input {
     box-sizing: border-box;
 }
 
+/* Botón de envío */
 button {
     width: 100%;
     padding: 10px;
-    background-color: #2A4759; /* Color del botón */
+    background-color: #2A4759; /* Color de fondo */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
 }
 
+/* Hover del botón */
 button:hover {
     background-color: #193140; /* Color al pasar el mouse */
 }
 
+/* Contenedor de roles */
 .roles-container {
     display: flex;
     flex-direction: column;
@@ -67,12 +76,14 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Contenedor para las tarjetas de rol */
 #roles {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Tarjetas individuales de rol */
 .role-card {
     background: white;
     border: 1px solid #ddd;
@@ -80,63 +91,68 @@ button:hover {
     padding: 20px;
     margin: 10px;
     text-align: center;
-    width: 250px; /* Un poco más ancho */
+    width: 250px; /* Ancho de las tarjetas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s; /* Efecto suave */
 }
 
+/* Hover en tarjetas de rol */
 .role-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Mayor sombra al pasar el mouse */
 }
 
+/* Icono de cada rol */
 .role-icon {
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-/* Estilos para secciones */
+/* Sección principal */
 main {
     padding: 20px;
 }
 
+/* Sección para los bloques */
 section {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     margin-bottom: 20px;
     padding: 15px;
 }
 
+/* Estilos de los títulos */
 h2 {
-    color: #2A4759; /* Títulos en color secundario */
+    color: #2A4759; /* Color secundario para títulos */
 }
 
-/* Estilos para listas */
+/* Estilos de las listas */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Elementos individuales de la lista */
 ul li {
-    background: #e7f3fe; /* Fondo claro para listas */
+    background: #e7f3fe; /* Fondo claro */
     border: 1px solid #d1e7fd;
     border-radius: 4px;
     margin: 5px 0;
     padding: 10px;
 }
 
-/* Responsive */
+/* Estilos para pantallas pequeñas */
 @media (max-width: 600px) {
     form {
-        width: 90%;
+        width: 90%; /* Reduce el ancho del formulario */
     }
     
     .role-card {
-        width: 90%;
+        width: 90%; /* Reduce el ancho de las tarjetas */
     }
     
     section {
-        width: 90%;
+        width: 90%; /* Reduce el ancho de las secciones */
     }
 }

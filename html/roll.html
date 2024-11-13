@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROLL</title>
-    <link rel="stylesheet" href="../CSS/styles.css"> 
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <script src="../js/roll.js" defer></script>
 </head>
 <body>
+    <!-- Encabezado de la página -->
     <header>
+        <!-- Mensaje de bienvenida personalizado según el usuario y su rol -->
         <h1 id="welcome-message">Bienvenido</h1>
+        <!-- Navegación dinámica para mostrar opciones de menú según el rol del usuario -->
         <nav></nav>
     </header>
     
+    <!-- Contenido principal de la página -->
     <main>
+        <!-- Descripción del rol actual del usuario -->
         <div id="role-description"></div>
+        
+        <!-- Contenedor para mostrar contenido dinámico según las opciones del menú -->
         <div id="content-display"></div>
 
-        <!-- Contenedor para el formulario de agendar cita -->
+        <!-- Contenedor para el formulario de agendar cita, inicialmente oculto -->
         <div id="schedule-appointment" style="display: none;">
             <h3>Agendar Cita</h3>
             <form id="appointment-form">
+                <!-- Selección del médico para la cita -->
                 <label for="doctor-select">Seleccionar Médico:</label>
                 <select id="doctor-select" required>
                     <option value="Doctor 1">Doctor 1</option>
@@ -28,20 +37,25 @@
                     <option value="Doctor 3">Doctor 3</option>
                 </select>
                 
+                <!-- Selección de la fecha de la cita -->
                 <label for="appointment-date">Fecha:</label>
                 <input type="date" id="appointment-date" required>
                 
+                <!-- Selección de la hora de la cita, limitada a un horario específico -->
                 <label for="appointment-time">Hora (8:00 - 12:00):</label>
                 <input type="time" id="appointment-time" min="08:00" max="12:00" required>
                 
+                <!-- Campo para la descripción de la cita -->
                 <label for="appointment-description">Descripción:</label>
                 <textarea id="appointment-description" rows="4" required></textarea>
                 
+                <!-- Botón para enviar el formulario de agendar cita -->
                 <button type="submit">Agendar</button>
             </form>
         </div>
     </main>
 
+    <!-- Pie de página de la aplicación -->
     <footer>
         <p>&copy; 2024 Tu Aplicación de Salud. Todos los derechos reservados.</p>
     </footer>

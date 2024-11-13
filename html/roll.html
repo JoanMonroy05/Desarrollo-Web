@@ -10,24 +10,40 @@
 <body>
     <header>
         <h1 id="welcome-message">Bienvenido</h1>
-        <nav>
-            <ul>
-                <li><a href="roll.html">Inicio</a></li>
-                <li><a href="#">Gestión de Usuarios</a></li>
-                <li><a href="#">Reportes</a></li>
-                <li><a href="index.html">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
+        <nav></nav>
     </header>
     
     <main>
         <div id="role-description"></div>
+        <div id="content-display"></div>
+
+        <!-- Contenedor para el formulario de agendar cita -->
+        <div id="schedule-appointment" style="display: none;">
+            <h3>Agendar Cita</h3>
+            <form id="appointment-form">
+                <label for="doctor-select">Seleccionar Médico:</label>
+                <select id="doctor-select" required>
+                    <option value="Doctor 1">Doctor 1</option>
+                    <option value="Doctor 2">Doctor 2</option>
+                    <option value="Doctor 3">Doctor 3</option>
+                </select>
+                
+                <label for="appointment-date">Fecha:</label>
+                <input type="date" id="appointment-date" required>
+                
+                <label for="appointment-time">Hora (8:00 - 12:00):</label>
+                <input type="time" id="appointment-time" min="08:00" max="12:00" required>
+                
+                <label for="appointment-description">Descripción:</label>
+                <textarea id="appointment-description" rows="4" required></textarea>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Tu Aplicación de Salud. Todos los derechos reservados.</p>
     </footer>
-
-
 </body>
 </html>

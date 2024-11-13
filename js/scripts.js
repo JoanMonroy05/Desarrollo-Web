@@ -1,8 +1,8 @@
 // Base de datos "quemada"
 const users = [
     {
-        username: "doctor1",
-        email: "doctor1@example.com", 
+        username: "Joan Monroy",
+        email: "monroy@gmail.com", 
         password: "contraseña123",
         roles: [
             { name: "Médico", description: "Gestiona citas y pacientes.", icon: "👨‍⚕️"},
@@ -10,8 +10,16 @@ const users = [
         ]
     },
     {
-        username: "patient1", 
-        email: "patient1@example.com",
+        username: "Daniel Amaya",
+        email: "amaya@gmail.com", 
+        password: "contraseña123",
+        roles: [
+            { name: "Médico", description: "Gestiona citas y pacientes.", icon: "👨‍⚕️"},
+        ]
+    },
+    {
+        username: "Martha Sanchez", 
+        email: "sanchez@gmail.com",
         password: "contraseña123",
         roles: [
             { name: "Paciente", description: "Solicita citas y ve su historial médico.", icon: "👤"}
@@ -47,8 +55,9 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
             // Añadir evento de clic para redirigir
             roleCard.addEventListener("click", function() {
-                setUserRoleInStorage(role.name);
+                setUserRoleInStorage(role.name, user.username);
                 window.location.href = "../html/roll.html";
+
             });
 
             rolesContainer.appendChild(roleCard);
@@ -59,6 +68,10 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 });
 
 
-function setUserRoleInStorage(roleName) {
+function setUserRoleInStorage(roleName, username) {
     localStorage.setItem('userRole', roleName);
+    localStorage.setItem('userName', username);
+    const user = users.find(u => u.username === username);
+        localStorage.setItem('userRoles', JSON.stringify(user.roles.map(r => r.name)));
 }
+
